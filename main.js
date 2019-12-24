@@ -5,5 +5,8 @@ const umur			= '30'
 
 //Concatenation
 
-//Cara 01
-console.log('Nama Saya Adalah '+ nama + ' dan Umur Saya Adalah '+ umur)
+//Cara 02 - ES2015 ++
+
+//Template String atau Template literals
+//Bukan ' / " tapi `
+console.log(`Nama Saya adalah ${nama} dan Umur Saya adalah ${umur}`)
