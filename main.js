@@ -1,14 +1,16 @@
 //let, const
 
-//Let bisa dilakukan reassign
+//Const tidak bisa dilakukan reassign
 //atau pemberian nilai secara berulang
+
+//Const harus di inisialisasi dengan nilai 
 
 //contoh
 
-let umur = 21;
+const umur = 21;
 umur = 22;
 
 console.log(umur)
 
-//Bisa dilihat console pada browser menampilkan pemberian nilai terkahir
-//Ini artinya variable let bsa di reassign
+//Bisa dilihat console pada browser menampilkan error
+//Karena di awal sudah ditentukan nilai, tapi kemudian di beri nilai lagi

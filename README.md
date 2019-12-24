@@ -1,41 +1,16 @@
-# javascript-crash-course
-Repo untuk belajar javascript
+# Variable
+Ada 3 Variable dalam JS, yaitu:
+1) var				=> dari versi awal JS (sudah jarang digunakan, lebih ke lets dan const)
+			a) Karena memiliki global scope
+			b) Contoh ada "if condition" dan kita buat variable TAPI di luar block / if condition tadi ada nama yang sama maka akan 
+						masalah
 
-# Section
-1) Liat Branch untuk tiap topics
-2) Liat Commit dari masing2 Branch utk sub topics
+Diperkenalkan di ES2015 atau ECMAScript
+yaitu, pembaharuan besar di javascript
 
-# For Who ?
-Udah Pasti Pemula dong
+2) let				=> Bisa reassign value
+3) const		=> Nilai Konstan
 
-# Apa itu JavaScript ?
-1) High Level Interpreted Programming Language
-    - High Level  => Banyak Abstraksi
-    - Abstraksi   => Tidak Perlu pusing management memory seperti di C++
-    - Interpreted => Program di eksekusi langsung tanpa compiler (Scripting Language)
+Perbedaan let & const
 
-2) ECMAScript = Javascript
-3) Multi Paradigm => Banyak style penulisan seperti OOP atau functional 
-4) Run on Client(Browser)/Server(Node.js) => Untuk front & back end
-
-# Kenapa Belajar Javascript ?
-1) Jika ingin membuat client-side product => php, c# etc untuk server-side
-2) Buat interactive user interface => ada framework seperti react dan vue
-3) Buat server side dan full stack app yang cepat
-4) Buat Mobile app => react native, vue native, quasar framework
-5) Buat Desktop App => quasar, electron 
-6) Fun dan Mudah di pelajari
-
-# Materi Crash Course
-1) Variable and Data Type
-2) Arrays
-3) Object Literals
-4) Method for String, arrays, objects, etc
-5) Loops - for, while, for...of, forEach, map
-6) Conditionals (if, ternary & switch)
-7) Functions (Normal & Arrow)
-8) OOP (Prototype & classes)
-9) DOM Selection
-10) DOM Manipulation
-11) Events
-12) Basic Form Validations
+1) Let, bisa memberi nilai ulang / reassign
