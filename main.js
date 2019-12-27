@@ -1,48 +1,33 @@
-//Manipulate DOM
+//Masukkan beberapa element dari DOM ke variabel
 
-//select element nya
-const ul = document.querySelector('.items')
-//panggil method modifikasi nya
+const formSaya 		= document.querySelector('#form-saya')
+const inputNama		= document.querySelector('#nama')
+const inputEmail	= document.querySelector('#email')
+const pesan						= document.querySelector('.pesan')
+const pengguna			= document.querySelector('#pengguna')
 
-// ul.remove()
-// ul.lastElementChild.remove() => pilih element anak terakhir <li> dan method remove
-// ul.firstElementChild.textContent = 'Hello' => pilih element anak pertama <li> dan properti textContent di set value nya
-// ul.children[1].innerText = 'tes' => properti textContent ada juga innerText
-// ul.children[2].innerHTML = '<h1>Tes</h1>' => utk menambhkan tag html
+//parameter1, Event yang ingin didengar di element form => submit
+//parameter2, tidak perlu  buat function tapi bisa panggil saja namanya
+formSaya.addEventListener('submit', onSubmit)
 
-/*  select class btn
-	const btn = document.querySelector('.btn')
-	btn.style.background = 'red'
-lalu ubah style background */ 
-
-//COntoh aplikasi ubah style di JS
-const btn = document.querySelector('.btn')
-
-//tambah event listener
-//paramter1 nama event, parameter2 nama function
-//jika menggunkan event, maka gunakan event parameter yaitu e
-
-//btn.addEventListener('click', (e) => console.log('click'))
-
-//akan berjalan sangat cepat karna btn kita ada di form submit
-//saat submit form maka akan kirim data ke file, jadi
-		//jika ada click di form submit atau btn submit
-		//harus stop atau prevent default behaviour
-		//pada EventParameter lakukan prevent
-
-// btn.addEventListener('click', (e) => {
-// 	e.preventDefault()
-// 	console.log('click')
-// })
-
-//contoh lain
-btn.addEventListener('click', (e) => {
+function onSubmit(e) {
 	e.preventDefault()
-	//klo id tambah pagar
-	document.querySelector('#form-saya').style.background = '#ccc'
-	document.querySelector('body').style.background = 'black'
-})
+	//jika ingin dapatkan value tambahkan saja properties value
+	// console.log(inputNama.value)
 
+	if(!inputNama.value.length || !inputEmail.value.length) {
+		pesan.classList.add('error')
+		pesan.innerHTML = '<h1>Masukkan Data dengan Benar</h1>'
 
+		setTimeout(() => pesan.remove(), 3000)
+	} else {
+		const li = document.createElement('li')
+		li.appendChild(document.createTextNode(`nama : ${inputNama.value} || email : ${inputEmail.value}`))
 
-//lihat di browser nya
+		pengguna.appendChild(li)
+
+		//besihkan
+		inputNama.value = ''
+		inputEmail.value = ''
+	}
+}
